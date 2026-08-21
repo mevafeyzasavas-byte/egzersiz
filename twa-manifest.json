@@ -1,0 +1,39 @@
+{
+  "packageId": "com.mevafeyzasavas.egzersiz",
+  "host": "mevafeyzasavas-byte.github.io",
+  "name": "Egzersiz",
+  "launcherName": "Egzersiz",
+  "display": "standalone",
+  "themeColor": "#F4F5F7",
+  "themeColorDark": "#F4F5F7",
+  "navigationColor": "#F4F5F7",
+  "navigationColorDark": "#F4F5F7",
+  "navigationDividerColor": "#F4F5F7",
+  "navigationDividerColorDark": "#F4F5F7",
+  "backgroundColor": "#F4F5F7",
+  "enableNotifications": false,
+  "startUrl": "/egzersiz/index.html",
+  "webManifestUrl": "https://mevafeyzasavas-byte.github.io/egzersiz/manifest.json",
+  "fullScopeUrl": "https://mevafeyzasavas-byte.github.io/egzersiz/",
+  "iconUrl": "https://mevafeyzasavas-byte.github.io/egzersiz/icons/icon-512.png",
+  "maskableIconUrl": "https://mevafeyzasavas-byte.github.io/egzersiz/icons/icon-512.png",
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "splashScreenFadeOutDuration": 300,
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "android"
+  },
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "orientation": "default",
+  "fallbackType": "customtabs",
+  "minSdkVersion": 21
+}
