@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BUBBLEWRAP_KEYSTORE_PASSWORD: egzersiz123
+      BUBBLEWRAP_KEY_PASSWORD: egzersiz123
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,12 +33,6 @@ jobs:
 
       - name: Install Bubblewrap CLI
         run: npm install -g @bubblewrap/cli
-
-      - name: Show detected JDK/SDK paths (debug)
-        run: |
-          echo "JAVA_HOME=$JAVA_HOME"
-          echo "ANDROID_HOME=$ANDROID_HOME"
-          echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT"
 
       - name: Configure Bubblewrap (skip interactive wizard)
         run: |
@@ -59,11 +56,7 @@ jobs:
 
       - name: Build APK with Bubblewrap
         run: |
-          printf 'n\n%s\nn\n%s\n' "$JAVA_HOME" "$ANDROID_HOME" | bubblewrap build \
-            --skipPwaValidation \
-            --password egzersiz123 \
-            --alias android \
-            --aliasPassword egzersiz123
+          echo "n" | bubblewrap build --skipPwaValidation
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
